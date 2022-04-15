@@ -21,7 +21,7 @@ puppeteer.use(StealthPlugin())
 	await page.goto('https://faucet.polygon.technology')
 	await page.waitForTimeout(2000)
 // enter wallet and submit request
-	await page.type('input[type=text]', '0xe1018079D3d90a2914eb78Ed0833c22927AE87d2');
+	await page.type('input[type=text]', 'your_wallet_here');
 	await page.$eval('button[type=button]', form => form.click() );
 	await page.waitForTimeout(2000)
 	await page.$eval('#app > div > div > div.index > div > div > div:nth-child(1) > div > div.section.position-absolute > div.modal.show > div > div > div:nth-child(2) > div.ps-t-12 > div > button', form => form.click() )
