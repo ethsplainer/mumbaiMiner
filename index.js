@@ -4,8 +4,8 @@ const puppeteer = require('puppeteer')
 ;(async () => {
   // launch browser instance
   const browser = await puppeteer.launch({
-		args: ["--no-sandbox"],
-    headless: false
+	args: ["--no-sandbox"],
+    	headless: false
   })
 
   // create new browser tab
