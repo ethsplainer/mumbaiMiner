@@ -1,4 +1,3 @@
-initial code. it works but idealy i want it to run headless. havent worked on that yet. right now it will only work with node12 since puppeteer is broken in node 14 and up.
-replace wallet with your own.
-  
-get creative :)
+replace your wallet. you need node v12 installed it wont work with v14 or v16 and i cba to figure out why
+
+combine this with https://github.com/ethsplainer/Mumbai-Gen/blob/main/faucet.js and you have the keys to the world
