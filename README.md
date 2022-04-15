@@ -19,7 +19,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 **Install and enable NodeJS v12**</br>
 ```
-nvm install 12.13.0</br>
+nvm install 12.13.0
 nvm use 12.13.0
 ```
 
