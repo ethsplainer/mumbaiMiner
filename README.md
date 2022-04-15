@@ -3,6 +3,10 @@ Installation:
 ```
 sudo git clone https://github.com/ethsplainer/mumbaiMiner.git
 ```
+**Install packages**
+```
+npm install
+```
 
 For this to work we need to install NodeJS v12.13.0
 
