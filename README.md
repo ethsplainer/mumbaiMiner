@@ -25,7 +25,7 @@ nvm use 12.13.0
 
 You can now add your wallet to index.js and run it. You can copy index.js as many times to use multiple wallets.
 
-You may chose to combine this with https://github.com/ethsplainer/Mumbai-Gen/blob/main/faucet.js
+You may choose to combine this with https://github.com/ethsplainer/Mumbai-Gen/blob/main/faucet.js
 Can be scaled by number of wallets you use.
 
 have fun.
