@@ -26,6 +26,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install 12.13.0
 nvm use 12.13.0
 ```
+It's possible that some libs arent installed properly. If that's the case run this
+```
+sudo apt install libxkbcommon-x11-0 libxdamage1 libgbm-dev libpangocairo-1.0-0 libpango-1.0-0
+```
 
 You can now add your wallet to index.js and run it. You can copy index.js as many times to use multiple wallets.
 
