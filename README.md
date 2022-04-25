@@ -33,7 +33,6 @@ sudo apt install libxkbcommon-x11-0 libxdamage1 libgbm-dev libpangocairo-1.0-0 l
 
 You can now add your wallet to index.js and run it. You can copy index.js as many times to use multiple wallets.
 
-You may choose to combine this with https://github.com/ethsplainer/faucet/blob/main/faucet.js</br>
 Can be scaled by number of wallets you use.
 
 have fun.
