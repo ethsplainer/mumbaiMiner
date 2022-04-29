@@ -1,7 +1,7 @@
 Installation:
 
 ```
-sudo git clone https://github.com/ethsplainer/mumbaiMiner.git
+sudo git clone https://github.com/samir-amriti/mumbaiMiner.git
 ```
 **Install packages**
 ```
