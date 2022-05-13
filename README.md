@@ -1,7 +1,7 @@
 Installation:
 
 ```
-sudo git clone https://github.com/smramr.git
+https://github.com/smramr/mumbaiMiner.git
 ```
 **Install packages**
 ```
