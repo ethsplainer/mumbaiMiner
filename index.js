@@ -29,13 +29,14 @@ puppeteer.use(StealthPlugin());
     await page.type("input[type=text", i);
     await page.waitForTimeout(2000);
     await page.$eval("button[type=button]", (form) => form.click());
-    console.log("Requesting tokens for wallet:", i);
     await page.waitForTimeout(2000);
     await page.$eval(
       "#app > div > div > div.index > div > div > div:nth-child(1) > div > div.section.position-absolute > div.modal.show > div > div > div:nth-child(2) > div.ps-t-12 > div > button",
       (form) => form.click()
     );
+    console.log("Requested tokens for wallet:", i);
   }
+  console.log("Waiting 5 minutes to next loop");
   await page.waitForTimeout(300000);
   await browser.close();
 })();
