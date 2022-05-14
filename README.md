@@ -1,7 +1,7 @@
 Installation:
 
 ```
-https://github.com/smramr/BaucetFuster.git
+sudo git clone https://github.com/smramr/BaucetFuster.git && cd BaucetFuster
 ```
 
 **Install packages**
