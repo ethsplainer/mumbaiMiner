@@ -1,15 +1,7 @@
-/* You can add as many wallets as you like. Make sure to enter them correctly.
+/* Multiple wallets can be added by seperating the items with ",".
 
-Example of 4 wallets.
+const addressList = ["wallet1", "wallet2", "wallet3"] */
 
-const addressList = [
-    "12332342342342423432",
-    "34523423656532462565",
-    "43459843058302854032",
-    "45234689206206802368"
-];
-*/
-
-const addressList = ["enter wallet here", "more wallets", "are optional"];
+const addressList = ["enter wallet here"];
 
 export default addressList;
