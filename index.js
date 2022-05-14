@@ -11,7 +11,7 @@ puppeteer.use(StealthPlugin());
 (async () => {
   const browser = await puppeteer.launch({
     args: ["--no-sandbox"],
-    headless: false,
+    headless: true,
   });
 
   // create new tab & set HTTP headers (to make headless work)
