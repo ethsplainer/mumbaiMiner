@@ -36,7 +36,7 @@ puppeteer.use(StealthPlugin());
     );
     console.log("Requested tokens for wallet:", i);
   }
-  console.log("Waiting 5 minutes to next loop");
+  console.log("5 minute cooldown until next loop");
   await page.waitForTimeout(300000);
   await browser.close();
 })();
