@@ -26,7 +26,6 @@ puppeteer.use(StealthPlugin());
   for (let i of wallets) {
     await page.goto("https://faucet.polygon.technology");
     await page.waitForTimeout(2000);
-    var t0 = performance.now();
     await page.type("input[type=text", i);
     await page.waitForTimeout(2000);
     await page.$eval("button[type=button]", (form) => form.click());
@@ -35,12 +34,16 @@ puppeteer.use(StealthPlugin());
       "#app > div > div > div.index > div > div > div:nth-child(1) > div > div.section.position-absolute > div.modal.show > div > div > div:nth-child(2) > div.ps-t-12 > div > button",
       (form) => form.click()
     );
+    await page.$eval(
+      "#app > div > div > div.index > div > div > div:nth-child(1) > div > div.section.position-absolute > div.modal.show > div > div > div.row.top-section > a > img"
+    );
+    var t0 = performance.now();
     console.log("Requested tokens for wallet:", i);
   }
 
   const t1 = performance.now();
   const loopTime = t1 - t0;
-  const cooldown = 300000 - wallets.length * loopTime;
+  const cooldown = 300000 - wallets.length * loopTime - 6000 * wallets.length;
 
   console.log("Minutes until next loop: " + cooldown / 60000);
   await page.waitForTimeout(cooldown);
