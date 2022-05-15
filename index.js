@@ -23,10 +23,10 @@ puppeteer.use(StealthPlugin());
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
   );
 
-  const t0 = performance.now();
   for (let i of wallets) {
     await page.goto("https://faucet.polygon.technology");
     await page.waitForTimeout(2000);
+    var t0 = performance.now();
     await page.type("input[type=text", i);
     await page.waitForTimeout(2000);
     await page.$eval("button[type=button]", (form) => form.click());
