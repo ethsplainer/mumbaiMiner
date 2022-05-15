@@ -1,6 +1,6 @@
 {
   "name": "BaucetFuster",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Automated process to request Mumbai tokens from Polygon faucet.",
   "main": "index.js",
   "type": "module",
