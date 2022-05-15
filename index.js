@@ -23,6 +23,7 @@ puppeteer.use(StealthPlugin());
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
   );
 
+  const t0 = performance.now();
   for (let i of wallets) {
     await page.goto("https://faucet.polygon.technology");
     await page.waitForTimeout(2000);
@@ -36,7 +37,12 @@ puppeteer.use(StealthPlugin());
     );
     console.log("Requested tokens for wallet:", i);
   }
-  console.log("5 minute cooldown until next loop");
-  await page.waitForTimeout(300000);
+
+  const t1 = performance.now();
+  const loopTime = t1 - t0;
+  const cooldown = 300000 - wallets.length * loopTime;
+
+  console.log("Minutes until next loop: " + cooldown / 60000);
+  await page.waitForTimeout(cooldown);
   await browser.close();
 })();
